@@ -1,0 +1,15 @@
+
+
+version: '2'
+services:
+  openvpn:
+    cap_add:
+
+    build: build/openvpn/.
+    #entrypoint: tail -f /dev/null
+    container_name: openvpn
+    ports:
+     - "1194:1194/udp"
+    restart: always
+    volumes:
+     - ./configs/openvpn/conf:/etc/openvpn
