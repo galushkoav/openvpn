@@ -48,7 +48,7 @@ ifconfig-pool-persist /etc/openvpn/ipp.list
 
 ## Gen cert
 ```bash
-expor```basht CLIENTNAME="your_client_name"
+export CLIENTNAME="your_client_name"
 
 docker-compose run --rm openvpn easyrsa build-client-full $CLIENTNAME nopass
 
