@@ -5,7 +5,7 @@ services:
     volumes:
      - ./configs/openvpn/conf:/etc/openvpn
     container_name: openvpn
-    hostname: vpnoffice.smart-uk.ru
+    hostname: vpnoffice.itc-life.ru
     #network_mode: host
     ports:
      - "1194:1194/udp"
