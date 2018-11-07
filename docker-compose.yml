@@ -1,15 +1,16 @@
-
-
 version: '2'
 services:
   openvpn:
-    cap_add:
-
     build: build/openvpn/.
-    #entrypoint: tail -f /dev/null
-    container_name: openvpn
-    ports:
-     - "1194:1194/udp"
-    restart: always
     volumes:
      - ./configs/openvpn/conf:/etc/openvpn
+    container_name: openvpn
+    hostname: vpnoffice.smart-uk.ru
+    #network_mode: host
+    ports:
+     - "1194:1194/udp"
+     - "1194:1194"
+    restart: always
+    cap_add:
+     - NET_ADMIN
+
